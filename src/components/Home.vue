@@ -1,8 +1,4 @@
-﻿<script>
-
-</script>
-
-<template>
+﻿<template>
   <router-view/>
   <div class="content">
     <div class="glass typewriter">
@@ -12,6 +8,10 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<script>
 
+</script>
+
+<style lang="scss" scoped>
+  
 </style>
