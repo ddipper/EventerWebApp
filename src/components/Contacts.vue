@@ -22,11 +22,13 @@
             </a>
          </div>
       </div>
+
    </div>
 </template>
 
 <style scoped lang="scss">
    .content {
-      min-height: calc(100vh - 200px);
+      min-height: calc(100vh - 199px);
+      background: #0D0D0F;
    }
 </style>
