@@ -183,13 +183,15 @@
               font-family: "Roboto Flex";
               font-weight: 600;
               font-size: 24px;
+              opacity: 0.9;
             }
           }
         }
         p{
-          font-weight: 300;
-          opacity: 0.9;
+          font-family: "Manrope";
+          font-weight: 400;
           font-size: 18px;
+          color: #48484B;
         }
 
       }
