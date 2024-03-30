@@ -170,6 +170,8 @@
         border-left: 1px solid rgba(255, 255, 255, 0.2);
       }
     }
-
+    .footer-contact, .footer-social{
+      opacity: 60%;
+    }
   }
 </style>

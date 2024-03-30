@@ -18,15 +18,15 @@ export default {
          <h2>Контакты</h2>
          <div class="socials">
             <a href="tel:+375296677654" class="footer-contact-item">
-               <img src="../assets/phone.png">
+               <img src="../assets/ContactPhone.png">
                +375 (29) 667 76  54
             </a>
             <a href="mailto:eventer@gmail.com" class="footer-contact-item">
-               <img src="../assets/mail.png">
+               <img src="../assets/ContactMail.png">
                eventer@gmail.com
             </a>
             <a href="t.me_eventer" class="footer-social-item">
-               <img src="../assets/telegram.png">
+               <img src="../assets/ContactTelegram.png">
                t.me_eventer
             </a>
          </div>
@@ -121,8 +121,18 @@ export default {
                color: white;
                font-size: 18px;
 
+               &:nth-child(1) img{
+                     width: 12px;
+               }
+               &:nth-child(2) img{
+                     width: 14px;
+               }
+               &:nth-child(3) img{
+                     width: 16px;
+               }
+
                img{
-                  width: 17px;
+                  margin-right: 10px;
                }
             }
          }
