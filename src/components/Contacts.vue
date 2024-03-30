@@ -2,7 +2,10 @@
 export default {
   data() {
     return {
-      text: ''
+      name: '',
+      organization: '',
+      email: '',
+      phone: '',
     }
   }
 }
@@ -28,10 +31,10 @@ export default {
             </a>
          </div>
          <v-form>
-            <v-text-field clearable label="Ваше имя" variant="outlined"></v-text-field>
-            <v-text-field clearable label="Организация" variant="outlined"></v-text-field>
-            <v-text-field clearable label="Email" variant="outlined"></v-text-field>
-            <v-text-field clearable variant="outlined" placeholder="(99) 999 99 99">
+            <v-text-field v-model="name" clearable label="Ваше имя" variant="outlined"></v-text-field>
+            <v-text-field v-model="organization" clearable label="Организация" variant="outlined"></v-text-field>
+            <v-text-field v-model="email" clearable label="Email" variant="outlined"></v-text-field>
+            <v-text-field v-model="phone" clearable variant="outlined" placeholder="(99) 999 99 99">
                <template v-slot:prepend-inner>
                   <span>+375 </span>
                </template>
@@ -62,33 +65,68 @@ export default {
    }
 
    .first-btn{
-    padding: 15px 30px;
-    background-color: #C15500;
-    border: 1px solid #C15500;
-    border-radius: 2px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    color: #F3F3F3;
-    font-family: "Roboto Flex", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.5s;
-    &:hover{
-      background-color: #525FE1;
-      border-color: #525FE1;
+      padding: 15px 30px;
+      background-color: #C15500;
+      border: 1px solid #C15500;
+      border-radius: 2px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      color: #F3F3F3;
+      font-family: "Roboto Flex", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
       transition: 0.5s;
-    }
-  }
-  .second-btn{
-    padding: 15px 30px;
-    background-color: #D0D0D0;
-    border: 1px solid #D0D0D0;
-    border-radius: 2px;
-    color: #D85F00;
-    font-family: "Roboto Flex", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
-  }
+      &:hover{
+         background-color: #525FE1;
+         border-color: #525FE1;
+         transition: 0.5s;
+      }
+   }
+   .second-btn{
+      padding: 15px 30px;
+      background-color: #D0D0D0;
+      border: 1px solid #D0D0D0;
+      border-radius: 2px;
+      color: #D85F00;
+      font-family: "Roboto Flex", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+   }
+
+   .content{
+      padding: 0 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .contacts{
+         display: flex;
+         flex-direction: column;
+         gap: 50px;
+
+         h2{
+            font-family: "Roboto Flex", sans-serif;
+            font-weight: 600;
+            font-size: 32px;
+         }
+
+         .socials{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            a{
+               text-decoration: none;
+               color: white;
+               font-size: 18px;
+
+               img{
+                  width: 17px;
+               }
+            }
+         }
+      }
+   }
 
 </style>
