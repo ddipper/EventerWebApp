@@ -31,22 +31,22 @@
               <div>
                 <img src="../assets/home/time.png" alt="">
               </div>
-              <p>Опыта</p>
+              <p>ОПЫТА</p>
               <h3>25 лет</h3>
             </div>
             <div class="card">
               <div>
                 <img src="../assets/home/ivents.png" alt="">
               </div>
-              <p>Опыта</p>
-              <h3>25 лет</h3>
+              <p>МЕРОПРИЯТИЙ</p>
+              <h3>150+</h3>
             </div>
             <div class="card">
               <div>
                 <img src="../assets/home/organizations.png" alt="">
               </div>
-              <p>Опыта</p>
-              <h3>25 лет</h3>
+              <p>ОРГАНИЗАЦИЙ</p>
+              <h3>50+</h3>
             </div>
           </div>
           <p>
@@ -58,7 +58,22 @@
       </div>
     </div>
   </section>
-
+  <section id="Golden_prison">
+    <div class="container">
+      <div class="prison-wrapper">
+        <div class="prison-text">
+          <p><img src="../assets/home/comments.png">ОТЗЫВ</p>
+          <h2>Golden prison</h2>
+          <p>НОВЫЙ ГОД</p>
+          <p>“Ребята справились на все сто! Все сотрудники были довольны. Настолько организованного построения корпоратива у нас еще не былою Ни минуты не осталось для того, чтобы скучать.Еда на уровне, алкоголь на уровне, развлечения на уровне”</p>
+        </div>
+        <div class="prison-button">
+          <button class="first-btn">Заказать звонок</button>
+          <button class="second-btn">Telegram<img src="../assets/home/tg.btn-icon.png"></button>
+        </div>
+      </div>
+    </div>
+  </section>
   
 </template>
 
@@ -96,7 +111,17 @@
     font-size: 16px;
     cursor: pointer;
   }
-
+  h1{
+    letter-spacing: .03em;
+  }
+  h2{
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+  h3{
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
   .hero{
     background-image: url(../assets/home/home_hero.png);
     background-size: cover;
@@ -104,6 +129,15 @@
   }
   .container{
     padding: 0 230px;
+  }
+  .first-btn{
+    @extend %first-btn;
+  }
+  .second-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @extend %second-btn;
   }
   .hero-content{
     height: 900px;
@@ -122,16 +156,6 @@
     .hero-buttons{
       display: flex;
       gap: 16px;
-
-      .first-btn{
-        @extend %first-btn;
-      }
-      .second-btn{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        @extend %second-btn;
-      }
     }
     
   }
@@ -176,8 +200,9 @@
             width: calc(33% - 32px);
 
             p{
-              font-weight: 300;
+              font-weight: 200;
               font-size: 14px;
+              color: #F3F3F3;
             }
             h3{
               font-family: "Roboto Flex";
@@ -194,6 +219,58 @@
           color: #48484B;
         }
 
+      }
+    }
+    #Golden_prison{
+      background-image: url(../assets/home/golden_prison.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      .container{
+        display: flex;
+        justify-content: right;
+      }
+      .prison-wrapper{
+        display: flex;
+        padding: 140px 0;
+        flex-direction: column;
+        height: 780px;
+        width: 636px;
+        justify-content: space-between;
+
+        .prison-text{
+          display: flex;
+          flex-direction: column;
+          h2{
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 52px;
+            letter-spacing: .03em;
+            opacity: .9;
+          }
+          p{
+            font-size: 18px;
+            font-weight: 400;
+            color: #F3F3F3;
+          }
+          p:nth-child(1){
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            margin-bottom: 16px;
+          }
+          p:nth-child(3){
+            margin-top: 8px;
+          }
+          p:nth-child(4){
+            font-weight: 300;
+            letter-spacing: .03em;
+            margin-top: 32px;
+          }
+        }
+        .prison-button{
+          display: flex;
+          gap: 16px;
+        }
       }
     }
 </style>
