@@ -39,6 +39,8 @@ export default {
                   <span>Email</span>
                </template>
             </v-text-field>
+            <button class="first-btn">Заказать звонок</button>
+            <button class="second-btn">Telegram<img src="../assets/home/tg.btn-icon.png"></button>
          </v-form>
       </div>
       <div class="location">
@@ -58,5 +60,35 @@ export default {
       min-height: calc(100vh - 199px);
       background: #0D0D0F;
    }
+
+   .first-btn{
+    padding: 15px 30px;
+    background-color: #C15500;
+    border: 1px solid #C15500;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: #F3F3F3;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+      background-color: #525FE1;
+      border-color: #525FE1;
+      transition: 0.5s;
+    }
+  }
+  .second-btn{
+    padding: 15px 30px;
+    background-color: #D0D0D0;
+    border: 1px solid #D0D0D0;
+    border-radius: 2px;
+    color: #D85F00;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
 </style>
