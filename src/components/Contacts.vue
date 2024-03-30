@@ -19,22 +19,22 @@ export default {
          <div class="socials">
             <a href="tel:+375296677654" class="footer-contact-item">
                <img src="../assets/ContactPhone.png">
-               +375 (29) 667 76  54
+               +375 (29) 162-55-89
             </a>
             <a href="mailto:eventer@gmail.com" class="footer-contact-item">
                <img src="../assets/ContactMail.png">
-               eventer@gmail.com
+               eventerby@gmail.com
             </a>
             <a href="t.me_eventer" class="footer-social-item">
                <img src="../assets/ContactTelegram.png">
-               t.me_eventer
+               t.me_eventer_by
             </a>
          </div>
          <v-form>
-            <v-text-field v-model="name" clearable label="Ваше имя" variant="outlined"></v-text-field>
-            <v-text-field v-model="organization" clearable label="Организация" variant="outlined"></v-text-field>
-            <v-text-field v-model="email" clearable label="Email" variant="outlined"></v-text-field>
-            <v-text-field v-model="phone" clearable variant="outlined" placeholder="(99) 999 99 99">
+            <v-text-field v-model="name" class="input" label="Ваше имя" variant="outlined"></v-text-field>
+            <v-text-field v-model="organization" class="input" label="Организация" variant="outlined"></v-text-field>
+            <v-text-field v-model="email" class="input" label="Email" variant="outlined"></v-text-field>
+            <v-text-field v-model="phone" class="input" variant="outlined" placeholder="(99) 999 99 99">
                <template v-slot:prepend-inner>
                   <span>+375 </span>
                </template>
@@ -109,17 +109,19 @@ export default {
             font-family: "Roboto Flex", sans-serif;
             font-weight: 600;
             font-size: 32px;
+            text-transform: uppercase;
          }
 
          .socials{
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 14px;
 
             a{
                text-decoration: none;
                color: white;
                font-size: 18px;
+               font-weight: 300;
 
                &:nth-child(1) img{
                      width: 12px;
@@ -133,6 +135,19 @@ export default {
 
                img{
                   margin-right: 10px;
+               }
+            }
+         }
+
+         form{
+            .input {
+               width: 470px;
+               font-family: 'Roboto', sans-serif;
+               font-size: 100px;
+
+
+               &:focus {
+                  border: 1px solid;
                }
             }
          }
