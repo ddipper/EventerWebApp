@@ -31,7 +31,7 @@ export default {
             <v-text-field clearable label="Ваше имя" variant="outlined"></v-text-field>
             <v-text-field clearable label="Организация" variant="outlined"></v-text-field>
             <v-text-field clearable label="Email" variant="outlined"></v-text-field>
-            <v-text-field clearable variant="outlined" placeholder="33 123123">
+            <v-text-field clearable variant="outlined" placeholder="(99) 999 99 99">
                <template v-slot:prepend-inner>
                   <span>+375 </span>
                </template>
@@ -59,45 +59,4 @@ export default {
       background: #0D0D0F;
    }
 
-
-   .text-field {
-      position: relative;
-      width: 300px;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 4px;
-
-      .input {
-         width: 100%;
-         border: none;
-         outline: none;
-         background: none;
-         font-size: 18px;
-      }
-
-      .line {
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         width: 100%;
-         height: 2px;
-         background: #3f51b5;
-         transform: scaleX(0);
-         transition: transform 0.3s ease;
-      }
-
-      .input:valid ~ .line {
-         transform: scaleX(1);
-      }
-
-      .clear-button {
-         position: absolute;
-         right: 10px;
-         top: 10px;
-         background: none;
-         border: none;
-         cursor: pointer;
-         font-size: 16px;
-      }
-   }
 </style>
