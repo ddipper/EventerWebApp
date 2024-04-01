@@ -1,4 +1,6 @@
 <script>
+import FormComponent from './Modules/FormComponent.vue'
+
 export default {
   data() {
     return {
@@ -6,7 +8,16 @@ export default {
       organization: '',
       email: '',
       phone: '',
+      rules: [
+      value => {
+        if (value) { return true }
+        return 'Это обязательное поле.'
+      },
+    ],
     }
+  },
+  components: {
+   FormComponent
   }
 }
 </script>
@@ -30,21 +41,7 @@ export default {
                t.me_eventer_by
             </a>
          </div>
-         <v-form>
-            <v-text-field v-model="name" class="input" label="Ваше имя" variant="outlined"></v-text-field>
-            <v-text-field v-model="organization" class="input" label="Организация" variant="outlined"></v-text-field>
-            <v-text-field v-model="email" class="input" label="Email" variant="outlined"></v-text-field>
-            <v-text-field v-model="phone" class="input" variant="outlined" placeholder="(99) 999 99 99">
-               <template v-slot:prepend-inner>
-                  <span>+375 </span>
-               </template>
-               <template v-slot:placeholder>
-                  <span>Email</span>
-               </template>
-            </v-text-field>
-            <button class="first-btn">Заказать звонок</button>
-            <button class="second-btn">Telegram<img src="../assets/home/tg.btn-icon.png"></button>
-         </v-form>
+         <FormComponent :color="'blue'"/>
       </div>
       <div class="location">
          <div class="location-text">
@@ -64,35 +61,7 @@ export default {
       background: #0D0D0F;
    }
 
-   .first-btn{
-      padding: 15px 30px;
-      background-color: #C15500;
-      border: 1px solid #C15500;
-      border-radius: 2px;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      color: #F3F3F3;
-      font-family: "Roboto Flex", sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.5s;
-      &:hover{
-         background-color: #525FE1;
-         border-color: #525FE1;
-         transition: 0.5s;
-      }
-   }
-   .second-btn{
-      padding: 15px 30px;
-      background-color: #D0D0D0;
-      border: 1px solid #D0D0D0;
-      border-radius: 2px;
-      color: #D85F00;
-      font-family: "Roboto Flex", sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      cursor: pointer;
-   }
+
 
    .content{
       padding: 0 64px;
@@ -116,6 +85,7 @@ export default {
             display: flex;
             flex-direction: column;
             gap: 14px;
+            align-items: flex-start;
 
             a{
                text-decoration: none;
@@ -135,19 +105,6 @@ export default {
 
                img{
                   margin-right: 10px;
-               }
-            }
-         }
-
-         form{
-            .input {
-               width: 470px;
-               font-family: 'Roboto', sans-serif;
-               font-size: 100px;
-
-
-               &:focus {
-                  border: 1px solid;
                }
             }
          }

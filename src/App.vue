@@ -72,7 +72,7 @@
 <style lang="scss" scoped>
   header{
     position: fixed;
-    width: calc(100% - 64px*2);
+    width: 100%;
     background-color: rgba(10, 10, 11, 0.8);
     display: flex;
     justify-content: space-between;
