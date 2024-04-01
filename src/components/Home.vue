@@ -85,18 +85,34 @@
           <div class="point">
             <div class="first-pt"><h3>1</h3></div>
             <h3>ВАШ ЗАПРОС</h3>
+            <p>Свяжитесь с нами удобным для вас способом, вы везде ответим одинаково быстро!</p>
           </div>
           <div class="point">
             <div class="second-pt"><h3>2</h3></div>
             <h3>ОБСУЖДЕНИЕ</h3>
+            <p>Мы обсудим ваши пожелания и предполагаемый бюджет, поможем свежими идеями!</p>
           </div>
           <div class="point">
             <div class="third-pt"><h3>3</h3></div>
             <h3>НАШ РЕСЕРЧ</h3>
+            <p>Оставьте это нам! Мы подберем для вас лучшие: </p>
+            <ul>
+              <li>Локацию</li>
+              <li>Развлечения</li>
+              <li>Меню</li>
+              <li>Ведущего</li>
+            </ul>
           </div>
           <div class="point">
             <div class="fourth-pt"><h3 >4</h3></div>
             <h3>ПРЕДЛОЖЕНИЕ</h3>
+            <p>Мы вернемся к вам с:</p>
+            <ul>
+              <li>Подробным планом мероприятия</li>
+              <li>Коммерческим предложением</li>
+              <li>Выпиской расходов</li>
+            </ul>
+            <p>После  совместного редактирования и согласования начинается подготовка.</p>
           </div>
           <div class="point">
             <div class="last-pt"><img src="../assets/home/done.png"></div>
@@ -105,6 +121,31 @@
         </div>
       </div>
     </div>
+  </section>
+  <section id="CorporateEv">
+    <div class="corp-left">
+      <div class="corp-sweetchs">
+        <div class="sweetch active">
+          <h3>КОРПОРАТИВЫ</h3>
+        </div>
+        <div class="sweetch">
+          <h3>BTL</h3>
+        </div>
+      </div>
+      <div class="corp-text">
+        <h2>ТЕКСТ ПРО КОРПОРАТЫ</h2>
+        <ul>
+          <li>Новый Год</li>
+          <li>8 Марта / 23 Февраля</li>
+          <li>День Рождения Копании</li>
+          <li>Летние</li>
+          <li>Зимние</li>
+          <li>Многое Другое..</li>
+        </ul>
+      </div>
+      <a>Узнать подробнее</a>
+    </div>
+    <div class="corp-right"></div>
   </section>
   
 </template>
@@ -361,9 +402,109 @@
           .last-pt{
             background: #CF5B00;
           }
+          >h3{
+            margin-top: 42px;
+            font-size: 18px;
+            font-weight: 600;
+            opacity: .9;
+          }
+          p{
+            margin-top: 12px;
+            color: #95959A;
+            font-size: 14px;
+            font-weight: 300;
+          }
+          ul{
+            margin-top: 12px;
+            margin-left: 15px;
+            list-style-image:url(../assets/home/list-style.png);
+            color: #95959A;
+            font-size: 14px;
+            font-weight: 300;
+          }
+          .fourth-pt ~ ul{
+            margin-top: 10px;
+          }
+          .fourth-pt ~ ul~p{
+            margin-top: 10px;
+          }
         }
       }
     }
   }
-    
+  #CorporateEv{
+    background-color: #141419;
+    display: flex;
+    .corp-left{
+      padding: 140px 0 192px 230px;
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .corp-sweetchs{
+        display: flex;
+        gap: 32px;
+
+        .sweetch{
+          padding-bottom: 12px;
+          border-bottom: 1px solid #f86d0300;
+
+          h3{
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 0.9;
+            color:#4B4B4F; 
+            &:hover{
+              cursor: pointer;
+            } 
+          }
+        }
+        .active{
+          border-bottom: 1px solid #F86F03;
+          h3{
+            color: #F3F3F3;
+          }
+        }
+      }
+      .corp-text{
+        h2{
+          font-size: 36px;
+          font-weight: 600;
+          opacity: .9;
+          line-height: 52px;
+        }
+        ul{
+          list-style: none;
+          color: #4B4B4F;
+          font-size: 18px;
+          font-weight: 300;
+        }
+        ul li::before {
+          content: "–";
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+
+        }
+        ul li {
+          margin-left: 0;
+          padding-left: 1em;
+        }
+      }
+      a{
+        text-decoration:underline;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .corp-right{
+      width: 45%;
+      background-image: url(../assets/home/Corp.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }  
 </style>
