@@ -119,7 +119,7 @@ export default {
 <template>
    <form @submit.prevent="submitForm()" :style="{'--button-color': buttonColor, '--button-hover-color': hoverColor}">
       <div class="input-container">
-         <input type="text" v-model="form.name" id="name" name="name" placeholder="Ваше имя" @input="validInput">
+         <input type="text" v-model="form.name" id="name" name="name" placeholder="Ваше Имя" @input="validInput">
          <p v-if="errors.name">{{ errors.name }}</p>
       </div>
       <div class="input-container">
