@@ -47,15 +47,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
-   .content {
+   .content{
       min-height: calc(100vh - 199px);
       background: #0D0D0F;
-   }
-
-
-
-   .content{
-      padding: 0 64px;
+      padding: 150px 64px;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -98,6 +93,28 @@ export default {
                   margin-right: 10px;
                }
             }
+         }
+      }
+      .location{
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+
+         .location-text {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            img{
+               width: 8px;
+               height: 11px;
+            }
+            h3{
+               font-weight: 300;
+            }
+         }
+         iframe{
+            width: 802px;
          }
       }
    }

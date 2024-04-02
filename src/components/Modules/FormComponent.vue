@@ -215,7 +215,7 @@ export default {
          font-size: 14px;
          position: absolute;
          left: 10px;
-         top: 13.7px;
+         top: 13px;
          //transform: translateY(-11.95px);
       }
       input{
