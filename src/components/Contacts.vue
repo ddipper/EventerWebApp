@@ -4,16 +4,7 @@ import FormComponent from './Modules/FormComponent.vue'
 export default {
   data() {
     return {
-      name: '',
-      organization: '',
-      email: '',
-      phone: '',
-      rules: [
-      value => {
-        if (value) { return true }
-        return 'Это обязательное поле.'
-      },
-    ],
+
     }
   },
   components: {
@@ -41,7 +32,7 @@ export default {
                t.me_eventer_by
             </a>
          </div>
-         <FormComponent :color="'blue'"/>
+         <FormComponent :color="'orange'"/>
       </div>
       <div class="location">
          <div class="location-text">
