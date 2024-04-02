@@ -71,6 +71,8 @@
 
 <style lang="scss" scoped>
   header{
+    position: fixed;
+    width: 100%;
     background-color: rgba(10, 10, 11, 0.8);
     display: flex;
     justify-content: space-between;
@@ -168,6 +170,8 @@
         border-left: 1px solid rgba(255, 255, 255, 0.2);
       }
     }
-
+    .footer-contact, .footer-social{
+      opacity: 60%;
+    }
   }
 </style>
