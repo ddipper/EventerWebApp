@@ -1,4 +1,6 @@
 <script>
+
+
 export default {
    data() { 
       return{
@@ -36,7 +38,7 @@ export default {
    methods: {
       redirect() {
          //TODO EDIT TG LINK
-         window.open('https://t.me/dd3vq', '_blank');
+         window.open(`${import.meta.env.VITE_TELEGRAM_LINK}`, '_blank');
       },
       formatTel() {
          this.validInput(event);
