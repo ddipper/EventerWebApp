@@ -90,6 +90,9 @@
       justify-content: space-around;
       align-items: center;
       width: 105px;
+      img{
+        height: 18px;
+      }
     }
 
     .header-links{
