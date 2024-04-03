@@ -13,7 +13,7 @@
       <router-link :to="{ name: 'BTL' }">BTL</router-link>
       <router-link :to="{ name: 'BTL' }">Галерея</router-link>
       <router-link :to="{ name: 'BTL' }">О нас</router-link>
-      <router-link :to="{ name: 'BTL' }">Контакты</router-link>
+      <router-link :to="{ name: 'Contacts' }">Контакты</router-link>
     </div>
     <div class="header-contacts">
       <a href="tel:+375296677654" class="header-contact-item">

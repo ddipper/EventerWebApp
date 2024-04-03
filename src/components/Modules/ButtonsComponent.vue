@@ -13,8 +13,12 @@ export default {
       },
       redirect() {
          //TODO EDIT TG LINK
-         window.open('https://t.me/dd3vq', '_blank');
+         window.open(`${import.meta.env.VITE_TELEGRAM_LINK}`, '_blank');
       },
+      scrollToForm() {
+         const element = document.querySelector('#form');
+         if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }
    },
    computed: {
       buttonColor() {
@@ -39,7 +43,7 @@ export default {
 
 <template>
    <div class="container" :style="{'--button-color': buttonColor, '--button-hover-color': hoverColor}">
-      <button class="first-btn" type="button" @click="navigate()">Заказать звонок</button>
+      <button class="first-btn" type="button" @click="scrollToForm()">Заказать звонок</button>
       <button class="second-btn" @click="redirect()" type="button">Telegram
          <img v-if="color == 'orange' || color == 'yellow'" src="../../assets/home/tg.btn-icon.png">
          <img v-if="color == 'blue'" src="../../assets/blueTelegram.png">
@@ -49,8 +53,7 @@ export default {
 
 <style scoped lang="scss">
    .first-btn{
-      margin-top: 20px;
-      padding: 15px 30px;
+      padding: 12px 30px;
       background-color: var(--button-color);
       border: 1px solid var(--button-color);
       border-radius: 2px;
@@ -69,7 +72,7 @@ export default {
    }
    
    .second-btn{
-      padding: 15px 30px;
+      padding: 12px 30px;
       background-color: #D0D0D0;
       border: 1px solid #D0D0D0;
       border-radius: 2px;
@@ -78,5 +81,10 @@ export default {
       font-weight: 500;
       font-size: 16px;
       cursor: pointer;
+   }
+
+   .container{
+      display: flex;
+      gap: 16px;
    }
 </style>

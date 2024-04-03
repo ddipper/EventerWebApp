@@ -8,15 +8,20 @@ export default {
     }
   },
   components: {
-   ButtonsComponent
+    ButtonsComponent
   }
 }
 </script>
 
 <template>
-   <ButtonsComponent :color="'blue'" />
+  <div class="content">
+    <ButtonsComponent :color="'orange'" />
+  </div>
 </template>
 
 <style scoped lang="scss">
-
+  .content{
+    height: 200vh;
+    padding: 64px;
+  }
 </style>
