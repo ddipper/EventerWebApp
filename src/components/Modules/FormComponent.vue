@@ -136,7 +136,7 @@ export default {
       </div>
       <button class="first-btn" @click="console.log(this.rawTel)" type="submit">Заказать звонок</button>
       <button class="second-btn" @click="redirect()" type="button">Telegram
-         <img v-if="color == 'orange' || 'yellow'" src="../../assets/home/tg.btn-icon.png">
+         <img v-if="color == 'orange' || color == 'yellow'" src="../../assets/home/tg.btn-icon.png">
          <img v-if="color == 'blue'" src="../../assets/blueTelegram.png">
       </button>
    </form>
