@@ -155,6 +155,7 @@
 </script>
 
 <style lang="scss" scoped>
+
   %first-btn{
     padding: 15px 30px;
     background-color: #C15500;
