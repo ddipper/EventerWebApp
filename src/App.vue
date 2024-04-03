@@ -43,7 +43,7 @@
         <div class="vl"></div>
         <router-link :to="{ name: 'BTL' }">Галерея</router-link>
         <div class="vl"></div>
-        <router-link :to="{ name: 'BTL' }">Контакты</router-link>
+        <router-link :to="{ name: 'Contacts' }">Контакты</router-link>
       </div>
       <div class="footer-contact">
         <a href="tel:+375296677654" class="footer-contact-item">
@@ -83,6 +83,7 @@
     a{
       text-decoration: none;
       color: white;
+      font-family: 'Manrope';
     }
   
     .header-logo{
@@ -90,6 +91,10 @@
       justify-content: space-around;
       align-items: center;
       width: 105px;
+      font-family: 'Manrope';
+      img{
+        height: 18px;
+      }
     }
 
     .header-links{
@@ -134,12 +139,13 @@
     a{
       text-decoration: none;
       color: #F3F3F3;
-      font-weight: 400;
+      font-weight: 300;
     }
 
     h3, .footer-links a{
-      font-weight: 300;
+      font-weight: 400;
       color: rgba(243, 243, 243, 0.6);
+      font-family: 'Manrope';
     }
     
     .footer-logo {
@@ -155,6 +161,11 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+    }
+
+    .footer-copyright h3{
+      font-size: 14px;
+      font-weight: 300;
     }
     
     .footer-contact a img, .footer-social a img{
@@ -172,6 +183,10 @@
     }
     .footer-contact, .footer-social{
       opacity: 60%;
+    }
+
+    .footer-contact-item{
+      font-weight: 300;
     }
   }
 </style>
