@@ -1,5 +1,6 @@
 <script>
 import ButtonsComponent from './Modules/ButtonsComponent.vue';
+import VideoPlayerComponent from './Modules/VideoPlayerComponent.vue';
 
 export default {
   data() {
@@ -8,7 +9,8 @@ export default {
     }
   },
   components: {
-    ButtonsComponent
+    ButtonsComponent,
+    VideoPlayerComponent
   }
 }
 </script>
@@ -25,6 +27,7 @@ export default {
       <h4>Мы стремимся к большему. Каждый раз путь становится только интеренсее! Новые знакомства, новые идеи, новые фишки. Мы можем делать так, как другие побоятся!</h4>
       <h4 class="author">Команда Eventer</h4>
     </selection>
+    <VideoPlayerComponent/>
   </div>
 </template>
 
