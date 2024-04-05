@@ -28,6 +28,11 @@ export default {
       <h4 class="author">Команда Eventer</h4>
     </selection>
     <VideoPlayerComponent/>
+    <section id="bigText">
+      <div class="bigText-item">
+        <div class="plus"></div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -96,6 +101,35 @@ export default {
     .author{
       width: 100%;
       text-align: right;
+    }
+  }
+  #bigText{
+
+    .plus {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background-color: #000;
+    }
+
+    .plus:before, .plus:after {
+      content: "";
+      position: absolute;
+      background-color: #000;
+    }
+
+    .plus:before {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 100px;
+    }
+
+    .plus:after {
+      top: 0;
+      left: 50%;
+      width: 100px;
+      height: 100%;
     }
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
    <div class="container">
-     <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264"
+     <video id="my-video" class="video-js vjs-default-skin" controls preload="auto"
        poster="../../assets/about/poster.png" data-setup="{}">
        <source src="../../assets/about/video.mp4" type='video/mp4'>
        <p class="vjs-no-js">
@@ -11,26 +11,26 @@
    </div>
  </template>
  
- <script>
- import videojs from 'video.js'
- import 'video.js/dist/video-js.css'
- 
- export default {
-   name: 'VideoPlayerComponent',
-   mounted() {
-     this.player = videojs(this.$el.querySelector('#my-video'), {
-       controlBar: {
-         pictureInPictureToggle: false
-       }
-     })
-   },
-   beforeDestroy() {
-     if (this.player) {
-       this.player.dispose()
-     }
-   }
- }
- </script>
+<script>
+  import videojs from 'video.js'
+  import 'video.js/dist/video-js.css'
+  
+  export default {
+    name: 'VideoPlayerComponent',
+    mounted() {
+      this.player = videojs(this.$el.querySelector('#my-video'), {
+        controlBar: {
+          pictureInPictureToggle: false
+        }
+      })
+    },
+    beforeDestroy() {
+      if (this.player) {
+        this.player.dispose()
+      }
+    }
+  }
+</script>
  
  <style scoped>
    .container{
@@ -40,28 +40,13 @@
 
    #my-video{
       width: 100%;
-      background:transparent;
-      height: 800px;
+      background: #16191f;
+      height: 888px;
    }
 
-   .vjs-poster{
-      width: 100px !important;
-   }
-
-   .video-js .vjs-volume-panel .vjs-volume-bar.vjs-slider-horizontal .vjs-slider-bar {
-   background-color: red !important;
-}
-
-.video-js .vjs-progress-control .vjs-play-progress,
-.video-js .vjs-progress-control .vjs-load-progress {
-   background-color: red !important;
-}
-
-.video-js .vjs-progress-control .vjs-play-progress::before,
-.video-js .vjs-progress-control .vjs-load-progress::before {
-   background-color: red !important;
-}
-
+   #my-video .vjs-poster {
+      width: 100%;
+    }
 
 
  </style>

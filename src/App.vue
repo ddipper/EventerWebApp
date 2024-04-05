@@ -79,6 +79,7 @@
     padding: 0 64px;
     height: 62px;
     align-items: center;
+    z-index: 5;
 
     a{
       text-decoration: none;
