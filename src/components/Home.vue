@@ -124,34 +124,86 @@
   </section>
   <section id="CorporateEv">
     <div class="corp-left">
-      <div class="corp-sweetchs">
-        <div class="sweetch active">
-          <h3>КОРПОРАТИВЫ</h3>
+      <div class="tab">
+        <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-1">Корпоративы</label>
+        <input id="tab-btn-2" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-2">BTL</label>
+        <div class="corp-text tab-content" id="content-1">
+          <h2>ТЕКСТ ПРО КОРПОРАТЫ</h2>
+          <ul>
+            <li>Новый Год</li>
+            <li>8 Марта / 23 Февраля</li>
+            <li>День Рождения Копании</li>
+            <li>Летние</li>
+            <li>Зимние</li>
+            <li>Многое Другое..</li>
+          </ul>
+          <a>Узнать подробнее</a>
         </div>
-        <div class="sweetch">
-          <h3>BTL</h3>
+        <div class="corp-text tab-content" id="content-2">
+          <h2>ТЕКСТ ПРО BTL</h2>
+          <ul>
+            <li>Новый Год</li>
+            <li>8 Марта / 23 Февраля</li>
+            <li>День Рождения Копании</li>
+            <li>Летние</li>
+            <li>Зимние</li>
+            <li>Многое Другое..</li>
+          </ul>
+          <a>Узнать подробнее</a>
         </div>
       </div>
-      <div class="corp-text">
-        <h2>ТЕКСТ ПРО КОРПОРАТЫ</h2>
-        <ul>
-          <li>Новый Год</li>
-          <li>8 Марта / 23 Февраля</li>
-          <li>День Рождения Копании</li>
-          <li>Летние</li>
-          <li>Зимние</li>
-          <li>Многое Другое..</li>
-        </ul>
-      </div>
-      <a>Узнать подробнее</a>
     </div>
     <div class="corp-right"></div>
   </section>
-  
+  <section id="Form">
+    <div class="talk">
+      <div class="talk-name">
+        <div><img src="../assets/home/talk.png" alt=""></div>
+        <h2>ДАВАЙТЕ ОБСУДИМ</h2>
+      </div>
+      <p>Свяжитесь с нами удобным для вас способом, вы везде ответим одинаково быстро!</p>
+    </div>
+    <FormComponent :color="'orange'"/>
+  </section>
+  <section>
+
+  </section>
+  <section id="Choise">
+    <div class="container">
+      <div class="hero-content bottom">
+        <div>
+          <h1>
+            Они выбрали нас
+          </h1>
+          <p>
+            И остались довольны бла бла бла и вы тоже 
+            нас заказыайте потому то нам доверяет более 
+            45 организаций постоянных клиентов
+          </p>
+        </div>
+        <div class="hero-buttons">
+          <button class="first-btn">Заказать звонок</button>
+          <button class="second-btn">Telegram<img src="../assets/home/tg.btn-icon.png"></button>
+        </div>
+      </div>
+    </div>  
+  </section>
 </template>
 
 <script>
+import FormComponent from './Modules/FormComponent.vue'
+export default{
+    data(){
+      return{
 
+      }
+    },
+    components:{
+      FormComponent
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -450,20 +502,10 @@
         .sweetch{
           padding-bottom: 12px;
           border-bottom: 1px solid #f86d0300;
-
-          h3{
-            font-size: 18px;
-            font-weight: 500;
-            opacity: 0.9;
-            color:#4B4B4F; 
-            &:hover{
-              cursor: pointer;
-            } 
           }
-        }
         .active{
           border-bottom: 1px solid #F86F03;
-          h3{
+          label{
             color: #F3F3F3;
           }
         }
@@ -480,6 +522,7 @@
           color: #4B4B4F;
           font-size: 18px;
           font-weight: 300;
+          margin-bottom: 40px;
         }
         ul li::before {
           content: "–";
@@ -492,14 +535,14 @@
           margin-left: 0;
           padding-left: 1em;
         }
-      }
-      a{
+        a{
         text-decoration:underline;
-
         &:hover{
           cursor: pointer;
         }
       }
+      }
+     
     }
     .corp-right{
       width: 45%;
@@ -507,5 +550,75 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
-  }  
+  } 
+  .tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    > input[type="radio"] {
+    display: none;
+    }
+    > label {
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: .03em;
+      color:#4B4B4F;
+      border-bottom: 1px solid transparent;
+      transition: color .15s ease-in-out, border-color .15s ease-in-out;
+      &:hover {
+        border-bottom-color: #F86F03;
+      }
+    }
+    > input[type="radio"]:checked + label {
+      cursor: default;
+      color: #F3F3F3;
+      border-bottom-color: #F86F03;
+    } 
+  }
+  .tab-content {
+    display: none;
+    width: 100%;
+  }
+  #tab-btn-1:checked~#content-1,
+  #tab-btn-2:checked~#content-2 {
+    display: block;
+  }
+  
+  #Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    .talk{
+      width: 470px;
+      margin-bottom: 48px;
+      .talk-name{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h2{
+          font-weight: 600;
+          font-size: 36px;
+          opacity: .9;
+        }
+      }
+      p{
+        padding-top: 12px;
+        font-size: 18px;
+        color: #48484B;
+      }
+    }
+  }
+  #Choise{
+    background-image: url(../assets/home/home_hero.png);
+    .bottom{
+      height: 680px;
+    }
+    p{
+      width: 350px;
+    }
+  }
+  
 </style>
