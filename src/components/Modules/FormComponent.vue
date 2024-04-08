@@ -1,4 +1,6 @@
 <script>
+
+
 export default {
    data() { 
       return{
@@ -36,7 +38,7 @@ export default {
    methods: {
       redirect() {
          //TODO EDIT TG LINK
-         window.open('https://t.me/dd3vq', '_blank');
+         window.open(`${import.meta.env.VITE_TELEGRAM_LINK}`, '_blank');
       },
       formatTel() {
          this.validInput(event);
@@ -117,7 +119,7 @@ export default {
 </script>
 
 <template>
-   <form @submit.prevent="submitForm()" :style="{'--button-color': buttonColor, '--button-hover-color': hoverColor}">
+   <form @submit.prevent="submitForm()" :style="{'--button-color': buttonColor, '--button-hover-color': hoverColor}" id="form">
       <div class="input-container">
          <input type="text" v-model="form.name" id="name" name="name" placeholder="Ваше Имя" @input="validInput">
          <p v-if="errors.name">{{ errors.name }}</p>
