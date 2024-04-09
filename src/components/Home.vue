@@ -167,8 +167,8 @@
     </div>
     <FormComponent :color="'orange'"/>
   </section>
-  <section>
-
+  <section id="Slider">
+    <EventsCarouselComponent/>
   </section>
   <section id="Choise">
     <div class="container">
@@ -193,17 +193,20 @@
 </template>
 
 <script>
-import FormComponent from './Modules/FormComponent.vue'
-export default{
-    data(){
-      return{
+  import EventsCarouselComponent from './Modules/EventsCarouselComponents.vue'
+  import FormComponent from './Modules/FormComponent.vue'
+  export default{
+      data(){
+        return{
 
+        }
+      },
+      components:{
+        FormComponent,
+        EventsCarouselComponent
       }
-    },
-    components:{
-      FormComponent
-    }
-}
+  }
+  
 </script>
 
 <style lang="scss" scoped>
@@ -609,6 +612,23 @@ export default{
         font-size: 18px;
         color: #48484B;
       }
+    }
+  }
+  #Slider{
+    padding: 70px 0 80px 0 ;
+    .carousel__item {
+      min-height: 200px;
+      width: 100%;
+      background-color: var(--vc-clr-primary);
+      color: var(--vc-clr-white);
+      font-size: 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel__slide {
+      padding: 10px;
     }
   }
   #Choise{

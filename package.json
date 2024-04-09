@@ -15,7 +15,8 @@
     "video.js": "^8.10.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
-    "vue3-carousel": "^0.3.3"
+    "vue3-carousel": "^0.3.3",
+    "vuetify": "^3.5.14"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
