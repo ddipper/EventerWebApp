@@ -42,7 +42,7 @@ export default {
 </script>
 
 <template>
-   <div class="container" :style="{'--button-color': buttonColor, '--button-hover-color': hoverColor}">
+   <div class="btn-wrapper" :style="{'--button-color': buttonColor, '--button-hover-color': hoverColor}">
       <button class="first-btn" type="button" @click="scrollToForm()">Заказать звонок</button>
       <button class="second-btn" @click="redirect()" type="button">Telegram
          <img v-if="color == 'orange' || color == 'yellow'" src="../../assets/home/tg.btn-icon.png">
@@ -83,7 +83,7 @@ export default {
       cursor: pointer;
    }
 
-   .container{
+   .btn-wrapper{
       display: flex;
       gap: 16px;
    }
