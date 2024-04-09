@@ -2,6 +2,7 @@
 import ButtonsComponent from './Modules/ButtonsComponent.vue';
 import VideoPlayerComponent from './Modules/VideoPlayerComponent.vue';
 import TeamCarouselComponent from './Modules/TeamCarouselComponent.vue';
+import DetailsSummaryComponent from './Modules/DetailsSummaryComponent.vue';
 
 export default {
   data() {
@@ -13,7 +14,8 @@ export default {
   components: {
     ButtonsComponent,
     VideoPlayerComponent,
-    TeamCarouselComponent
+    TeamCarouselComponent,
+    DetailsSummaryComponent
   },
   methods: {
     prev() {
@@ -66,6 +68,9 @@ export default {
     <section id="slider">
       <h2>Наша команда</h2>
       <TeamCarouselComponent/>
+    </section>
+    <section id="summary">
+      <DetailsSummaryComponent/>
     </section>
   </div>
 </template>
