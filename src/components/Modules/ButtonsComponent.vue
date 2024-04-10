@@ -53,6 +53,7 @@ export default {
 
 <style scoped lang="scss">
    .first-btn{
+      user-select: none;
       padding: 12px 30px;
       background-color: var(--button-color);
       border: 1px solid var(--button-color);
@@ -72,6 +73,7 @@ export default {
    }
    
    .second-btn{
+      user-select: none;
       padding: 12px 30px;
       background-color: #D0D0D0;
       border: 1px solid #D0D0D0;

@@ -53,6 +53,7 @@ export default defineComponent({
  
 <style scoped>
    .carousel__item{
+      user-select: none;
       width: 100%;
       border-radius: 4px;
       background-color: #141419;
