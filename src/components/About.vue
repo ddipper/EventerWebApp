@@ -2,6 +2,7 @@
 import ButtonsComponent from './Modules/ButtonsComponent.vue';
 import VideoPlayerComponent from './Modules/VideoPlayerComponent.vue';
 import TeamCarouselComponent from './Modules/TeamCarouselComponent.vue';
+import DetailsSummaryComponent from './Modules/DetailsSummaryComponent.vue';
 
 export default {
   data() {
@@ -13,7 +14,8 @@ export default {
   components: {
     ButtonsComponent,
     VideoPlayerComponent,
-    TeamCarouselComponent
+    TeamCarouselComponent,
+    DetailsSummaryComponent
   },
   methods: {
     prev() {
@@ -66,6 +68,13 @@ export default {
     <section id="slider">
       <h2>Наша команда</h2>
       <TeamCarouselComponent/>
+    </section>
+    <section id="summary">
+      <DetailsSummaryComponent :color="'orange'"/>
+    </section>
+    <section id="caption">
+      <h3>“Ваше желание - наш <span>результат</span>“</h3>
+      <h4>Мы стремимся к большему. Каждый раз путь становится только интеренсее! Новые знакомства, новые идеи, новые фишки. Мы можем делать так, как другие побоятся!</h4>
     </section>
   </div>
 </template>
@@ -202,7 +211,20 @@ export default {
 
   #slider{
     width: 100%;
-    padding: 140px 0;
+    padding: 0 0 140px;
+    h2{
+      letter-spacing: 0.03em;
+      font-weight: 500px;
+      font-size: 36px;
+      padding-left: 230px;
+      padding-bottom: 106px;
+      text-transform: uppercase;
+    }
+  }
+
+  #summary{
+    width: 100%;
+    background: #141419;
   }
 
 </style>
