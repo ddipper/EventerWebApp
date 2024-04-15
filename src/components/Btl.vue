@@ -13,6 +13,17 @@
       </div>
     </div>
   </section>
+  <section id="WhatIs">
+    <div class="container">
+      <div class="what-title">
+        <img src="../assets/BTL/icon2.png" alt="">
+        <h2>Что такое BTL?</h2>
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
