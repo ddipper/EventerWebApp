@@ -1,5 +1,5 @@
 <script>
-
+import emailjs from 'emailjs-com';
 
 export default {
    data() { 
@@ -37,7 +37,6 @@ export default {
    },
    methods: {
       redirect() {
-         //TODO EDIT TG LINK
          window.open(`${import.meta.env.VITE_TELEGRAM_LINK}`, '_blank');
       },
       formatTel() {
@@ -68,8 +67,17 @@ export default {
       submitForm() {
          this.errors = this.validateForm(this.form);
          if (Object.keys(this.errors).length === 0) {
-            window.alert("Hello world!");
-            
+            document.querySelector('.hidden__btn').style.display = 'none';
+            emailjs.send(`${import.meta.env.VITE_EMAILJS_SERVICE}`, `${import.meta.env.VITE_EMAILJS_TEMPLATE}`, this.form, `${import.meta.env.VITE_EMAILJS_PUBLICKEY}`)
+               .then((response) => {
+                  this.form.name = ''; this.form.organisation = ''; this.form.email = ''; this.form.tel = '';
+                  document.querySelector('.alert__text').style.display = 'block';
+               }, (error) => {
+                  window.alert("An error occurred while sending the email.");
+                  document.querySelector('.alert__text').style.display = 'none';
+                  document.querySelector('.hidden__btn').style.display = 'block';
+               }
+            );
          }
       },
       validateForm(form) {
@@ -136,7 +144,8 @@ export default {
          <input type="tel" v-model="form.tel" id="tel" @input="formatTel()" name="tel" placeholder="(99) 999 99-99">
          <p v-if="errors.tel">{{ errors.tel }}</p>
       </div>
-      <button class="first-btn" @click="console.log(this.rawTel)" type="submit">Заказать звонок</button>
+      <button class="first-btn hidden__btn" @click="console.log(this.rawTel)" type="submit">Заказать звонок</button>
+      <p class="alert__text">Вы успешно отправили заявку, ожидайте звонка!</p>
       <button class="second-btn" @click="redirect()" type="button">Telegram
          <img v-if="color == 'orange' || color == 'yellow'" src="../../assets/home/tg.btn-icon.png">
          <img v-if="color == 'blue'" src="../../assets/blueTelegram.png">
@@ -230,6 +239,13 @@ export default {
       display: flex;
       flex-direction: column;
       gap: 12px;
+   }
+
+   .alert__text{
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      color: rgb(81, 255, 81);
+      display: none;
    }
 
 </style>

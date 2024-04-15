@@ -189,5 +189,11 @@
     .footer-contact-item{
       font-weight: 300;
     }
+
+    .footer-social-item{
+      img{
+        width: 13px;
+      }
+    }
   }
 </style>
