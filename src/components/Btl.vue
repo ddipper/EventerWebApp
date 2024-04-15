@@ -9,7 +9,7 @@
         <h2>
           Более 180 мероприятий за 10 лет на высшем уровне
         </h2>
-        <ButtonsComponent :color="'orange'" />
+        <ButtonsComponent :color="'yellow'" />
       </div>
     </div>
   </section>
@@ -39,7 +39,7 @@ import ButtonsComponent from './Modules/ButtonsComponent.vue'
     font-weight: 500;
   }
   .hero{
-    background-image: url(../assets/home/home_hero.png);
+    background-image: url(../assets/BTL/btl_hero.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
