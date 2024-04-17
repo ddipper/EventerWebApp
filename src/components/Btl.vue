@@ -21,9 +21,9 @@
         </div> 
         <h2>Что такое BTL?</h2>
       </div>
-      <div>
+      <div class="right-summary">
         <p>
-          BTL - это инструменты непрямой рекламы, направленные на продвижение товара/услуги и на создание положительного имиджа бренда.
+          <span>BTL</span> - это инструменты непрямой рекламы, направленные на продвижение товара/услуги и на создание положительного имиджа бренда.
         </p>
         <div>
           <h3>Виды BTL инструментов:</h3>
@@ -40,10 +40,89 @@
       </div>
     </div>
   </section>
+  <section id="Coca-cola">
+    <div class="container">
+      <div class="cola-wrapper">
+        <div class="cola-text">
+          <p><img src="../assets/home/comments.png">ОТЗЫВ</p>
+          <h2>Coca-cola</h2>
+          <p>ПРОМОАКЦИЯ</p>
+          <p>“Ребята справились на все сто! Все сотрудники были довольны. Настолько организованного построения корпоратива у нас еще не былою Ни минуты не осталось для того, чтобы скучать.Еда на уровне, алкоголь на уровне, развлечения на уровне”</p>
+        </div>
+        <ButtonsComponent :color="'yellow'"/>
+      </div>
+    </div>
+  </section>
+  <section id="Organization">
+    <div class="container organization_wrapper">
+      <h2>
+        ЭТАПЫ ОРГАНИЗАЦИИ С EVENTER
+      </h2>
+      <div class="stages">
+        <hr class="stages-line">
+        <div class="stages-points">
+          <div class="point">
+            <div class="first-pt"><h3>1</h3></div>
+            <h3>ВАШ ЗАПРОС</h3>
+            <p>Свяжитесь с нами удобным для вас способом, вы везде ответим одинаково быстро!</p>
+          </div>
+          <div class="point">
+            <div class="second-pt"><h3>2</h3></div>
+            <h3>ОБСУЖДЕНИЕ</h3>
+            <p>Мы обсудим ваши пожелания и предполагаемый бюджет, поможем свежими идеями!</p>
+          </div>
+          <div class="point">
+            <div class="third-pt"><h3>3</h3></div>
+            <h3>НАШ РЕСЕРЧ</h3>
+            <p>Оставьте это нам! Мы подберем для вас лучшие: </p>
+            <ul>
+              <li>Локацию</li>
+              <li>Развлечения</li>
+              <li>Меню</li>
+              <li>Ведущего</li>
+            </ul>
+          </div>
+          <div class="point">
+            <div class="fourth-pt"><h3 >4</h3></div>
+            <h3>ПРЕДЛОЖЕНИЕ</h3>
+            <p>Мы вернемся к вам с:</p>
+            <ul>
+              <li>Подробным планом мероприятия</li>
+              <li>Коммерческим предложением</li>
+              <li>Выпиской расходов</li>
+            </ul>
+            <p>После  совместного редактирования и согласования начинается подготовка.</p>
+          </div>
+          <div class="point">
+            <div class="last-pt"><img src="../assets/home/done.png"></div>
+            <h3>ЛУЧШЕЕ МЕРОПРИЯТИЕ НА ВАШ БЮДЖЕТ!</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Form">
+    <div class="talk">
+      <div class="talk-name">
+        <div><img src="../assets/home/talk.png" alt=""></div>
+        <h2>ДАВАЙТЕ ОБСУДИМ</h2>
+      </div>
+      <p>Свяжитесь с нами удобным для вас способом, вы везде ответим одинаково быстро!</p>
+    </div>
+    <FormComponent :color="'yellow'"/>
+  </section>
+  <section>
+
+  </section>
+  <section>
+    <DetailsSummaryComponent :color="'yellow'" />
+  </section>
 </template>
 
 <script>
-import ButtonsComponent from './Modules/ButtonsComponent.vue'
+import ButtonsComponent from './Modules/ButtonsComponent.vue';
+import DetailsSummaryComponent from './Modules/DetailsSummaryComponent.vue';
+import FormComponent from './Modules/FormComponent.vue';
   export default{
       data(){
         return{
@@ -62,7 +141,9 @@ import ButtonsComponent from './Modules/ButtonsComponent.vue'
         };
       },
       components:{
-        ButtonsComponent
+        ButtonsComponent,
+        FormComponent,
+        DetailsSummaryComponent
       },
     methods: {
       handleToggle(index) {
@@ -105,6 +186,42 @@ import ButtonsComponent from './Modules/ButtonsComponent.vue'
       font-weight:500;
       line-height: 60px;
       color: #F3F3F3;
+    }
+  }
+  .what-title{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    h2{
+      font-size: 36px;
+      font-weight: 600;
+    }
+  }
+  #WhatIs{
+    .container{
+      padding: 140px 230px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+  .right-summary{
+    >p{
+      max-width: 620px;
+    }
+    span{
+      font-size: 18px;
+      font-family: "Manrope";
+      font-weight: 600;
+      color: #FFA41B;
+    }
+    h3{
+      font-size: 18px;
+      font-family: "Manrope";
+      font-weight: 600;
+      color: #FFA41B;
+      margin-top: 32px;
+      margin-bottom: 24px;
     }
   }
   .details{
@@ -162,4 +279,171 @@ import ButtonsComponent from './Modules/ButtonsComponent.vue'
    .details:nth-child(5){
       border-bottom: rgba(255, 255, 255, 0.1) 1px solid;
    }
+   #Coca-cola{
+    background-image: url(../assets/BTL/cola-back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container{
+      display: flex;
+      justify-content: left;
+    }
+    .cola-wrapper{
+      display: flex;
+      padding: 120px 0;
+      flex-direction: column;
+      height: 700px;
+      width: 636px;
+      justify-content: space-between;
+
+      .cola-text{
+        display: flex;
+        flex-direction: column;
+        h2{
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 52px;
+          letter-spacing: .03em;
+          opacity: .9;
+        }
+        p{
+          font-size: 18px;
+          font-weight: 400;
+          color: #F3F3F3;
+        }
+        p:nth-child(1){
+          display: flex;
+          gap: 2px;
+          align-items: center;
+          margin-bottom: 16px;
+        }
+        p:nth-child(3){
+          margin-top: 8px;
+        }
+        p:nth-child(4){
+          font-weight: 300;
+          letter-spacing: .03em;
+          margin-top: 32px;
+          color: #8B8B89;
+        }
+      }
+      .prison-button{
+        display: flex;
+        gap: 16px;
+      }
+    }
+  }
+  .organization_wrapper{
+    padding-top: 180px;
+    padding-bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    h2{
+      font-size: 36px;
+      font-weight: 600;
+      color: #F3F3F3;
+      opacity: .9;
+    }
+    .stages{
+      .stages-line{
+        width: 80%;
+        background: linear-gradient(to right,#E38B06,#3E2A0B 23%,#3E290B 83%,#E38B06);
+        height: 5px;
+        border: none;
+        margin-left: 21px;
+        margin-bottom: -22px;
+      }
+      .stages-points{
+        display: flex;
+
+        .point{
+          width: 20%;
+          div{
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3{
+              color: #F3F3F3;
+              font-size: 20px;
+              font-weight: 600;
+              opacity: .9;
+            }
+          }
+          .first-pt{
+            background: #EA920E;
+          }
+          .second-pt{
+            background: linear-gradient(#46290F,#321505);
+          }
+          .third-pt{
+            background: linear-gradient(#46290F,#321505);
+          }
+          .fourth-pt{
+            background: linear-gradient(#46290F,#321505);
+          }
+          .last-pt{
+            background: #EA920E;
+          }
+          >h3{
+            margin-top: 42px;
+            font-size: 18px;
+            font-weight: 600;
+            opacity: .9;
+          }
+          p{
+            margin-top: 12px;
+            color: #95959A;
+            font-size: 14px;
+            font-weight: 300;
+          }
+          ul{
+            margin-top: 12px;
+            list-style: none;
+            color: #95959A;
+            font-size: 14px;
+            font-weight: 300;
+            li {
+              padding-left: 15px;
+              background: url(../assets/BTL/list-style-yellow.png) 0 0.6em no-repeat;
+            }
+          }
+          .fourth-pt ~ ul{
+            margin-top: 10px;
+          }
+          .fourth-pt ~ ul~p{
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  #Form{
+    background-color: #0A0A0B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    .talk{
+      width: 470px;
+      margin-bottom: 48px;
+      .talk-name{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h2{
+          font-weight: 600;
+          font-size: 36px;
+          opacity: .9;
+        }
+      }
+      p{
+        padding-top: 12px;
+        font-size: 18px;
+        color: #4F4F52;
+      }
+    }
+  }
 </style>
