@@ -111,8 +111,44 @@
     </div>
     <FormComponent :color="'yellow'"/>
   </section>
-  <section>
-
+  <section id="Events">
+    <div class="container">
+      <div class="events-wrapper">
+        <div class="tab">
+        <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-1">AКЦИИ</label>
+        <input id="tab-btn-2" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-2">ДЕГУСТАЦИИ</label>
+        <input id="tab-btn-3" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-3">ВЫСТАВКИ</label>
+        <input id="tab-btn-4" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-4">ВЫСТАВКИ</label>
+        <input id="tab-btn-5" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-5">ВЫСТАВКИ</label>
+        <div class="eve-cards tab-content" id="content-1">
+          <div class="card">
+            <img src="../assets/BTL/photo1.png" alt="">
+            <div>
+              <h2>Golden prison:</h2>
+              <p>Новый год 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="corp-text tab-content" id="content-2">
+          <h2>ТЕКСТ ПРО BTL</h2>
+          <ul>
+            <li>Новый Год</li>
+            <li>8 Марта / 23 Февраля</li>
+            <li>День Рождения Копании</li>
+            <li>Летние</li>
+            <li>Зимние</li>
+            <li>Многое Другое..</li>
+          </ul>
+          <a>Узнать подробнее</a>
+        </div>
+      </div>
+      </div>
+    </div>
   </section>
   <section>
     <DetailsSummaryComponent :color="'yellow'" />
@@ -446,4 +482,43 @@ import FormComponent from './Modules/FormComponent.vue';
       }
     }
   }
+  #Events{
+    .tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+      > input[type="radio"] {
+      display: none;
+      }
+      > label {
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: .03em;
+        color:#4B4B4F;
+        border-bottom: 1px solid transparent;
+        transition: color .15s ease-in-out, border-color .15s ease-in-out;
+        &:hover {
+          border-bottom-color: #F86F03;
+        }
+      }
+      > input[type="radio"]:checked + label {
+        cursor: default;
+        color: #F3F3F3;
+        border-bottom-color: #F86F03;
+      } 
+    }
+    .tab-content {
+      display: none;
+      width: 100%;
+    }
+    #tab-btn-1:checked~#content-1,
+    #tab-btn-2:checked~#content-2,
+    #tab-btn-3:checked~#content-3,
+    #tab-btn-4:checked~#content-4,
+    #tab-btn-5:checked~#content-5 {
+      display: block;
+    }
+  } 
 </style>
