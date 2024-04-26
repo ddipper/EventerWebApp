@@ -71,8 +71,12 @@ export default {
       justify-content: space-between;
    }
 
+   #drop-down{
+     width: 43%;
+   }
+
    .details{
-      width: 635px;
+      width: 100%;
       border-top: rgba(255, 255, 255, 0.1) 1px solid;
       font-family: 'Manrope';
       letter-spacing: 0.03em;
@@ -128,7 +132,7 @@ export default {
    }
 
    .caption__drop-down{
-      width: 470px;
+     width: 470px;
 
       h2{
          text-transform: uppercase;
