@@ -190,11 +190,15 @@
       </div>
     </div>  
   </section>
+  <section id="Summary">
+    <DetailsSummaryComponent :color="'orange'" />
+  </section>
 </template>
 
 <script>
-  import EventsCarouselComponent from './Modules/EventsCarouselComponents.vue'
-  import FormComponent from './Modules/FormComponent.vue'
+  import EventsCarouselComponent from './Modules/EventsCarouselComponents.vue';
+  import FormComponent from './Modules/FormComponent.vue';
+  import DetailsSummaryComponent from './Modules/DetailsSummaryComponent.vue';
   export default{
       data(){
         return{
@@ -203,7 +207,8 @@
       },
       components:{
         FormComponent,
-        EventsCarouselComponent
+        EventsCarouselComponent,
+        DetailsSummaryComponent
       }
   }
   
@@ -472,11 +477,14 @@
           }
           ul{
             margin-top: 12px;
-            margin-left: 15px;
-            list-style-image:url(../assets/home/list-style.png);
+            list-style:none;
             color: #95959A;
             font-size: 14px;
             font-weight: 300;
+            li {
+              padding-left: 15px;
+              background: url(../assets/home/list-style.png) 0 0.6em no-repeat;
+            }
           }
           .fourth-pt ~ ul{
             margin-top: 10px;
