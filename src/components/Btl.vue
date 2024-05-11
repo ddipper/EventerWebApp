@@ -126,25 +126,164 @@
         <input id="tab-btn-5" name="tab-btn" type="radio" value="">
         <label for="tab-btn-5">ВЫСТАВКИ</label>
         <div class="eve-cards tab-content" id="content-1">
-          <div class="card">
-            <img src="../assets/BTL/photo1.png" alt="">
-            <div>
-              <h2>Golden prison:</h2>
-              <p>Новый год 2023</p>
+          <div class="card-wrapper">
+            <div class="card">
+              <img src="../assets/BTL/photo1.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo2.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo3.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo3.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="corp-text tab-content" id="content-2">
-          <h2>ТЕКСТ ПРО BTL</h2>
-          <ul>
-            <li>Новый Год</li>
-            <li>8 Марта / 23 Февраля</li>
-            <li>День Рождения Копании</li>
-            <li>Летние</li>
-            <li>Зимние</li>
-            <li>Многое Другое..</li>
-          </ul>
-          <a>Узнать подробнее</a>
+        <div class="eve-cards tab-content" id="content-2">
+          <div class="card-wrapper">
+            <div class="card">
+              <img src="../assets/BTL/photo2.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo3.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo1.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo3.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eve-cards tab-content" id="content-3">
+          <div class="card-wrapper">
+            <div class="card">
+              <img src="../assets/BTL/photo3.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo1.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo1.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo2.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eve-cards tab-content" id="content-4">
+          <div class="card-wrapper">
+            <div class="card">
+              <img src="../assets/BTL/photo3.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo3.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo1.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo1.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eve-cards tab-content" id="content-5">
+          <div class="card-wrapper">
+            <div class="card">
+              <img src="../assets/BTL/photo1.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo3.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo2.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/BTL/photo1.png" alt="">
+              <div>
+                <h2>Golden prison:</h2>
+                <p>Новый год 2023</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       </div>
@@ -512,6 +651,13 @@ import FormComponent from './Modules/FormComponent.vue';
     .tab-content {
       display: none;
       width: 100%;
+    }
+    .card-wrapper{
+      display: flex;
+      justify-content: space-between;
+      img{
+        max-height: 300px;
+      }
     }
     #tab-btn-1:checked~#content-1,
     #tab-btn-2:checked~#content-2,
